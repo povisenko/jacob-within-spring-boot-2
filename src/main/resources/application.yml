@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: jacob-within-spring-boot-2
+  data:
+    mongodb:
+      database: jacob_local_unix
+      host: ${MONGO_HOST}
+
+DLL_API_ADDRESS: 185.13.72.96

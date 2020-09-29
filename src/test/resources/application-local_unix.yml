@@ -1,0 +1,5 @@
+spring:
+  profiles: local_unix
+  data:
+    mongodb:
+      host: 127.0.0.1

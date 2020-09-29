@@ -1,0 +1,21 @@
+<UserMatches>
+    <UserList>
+        <User>
+            <DBID>500081</DBID>
+            <RefID>500081</RefID>
+            <DateOfBirth>11/09/1986</DateOfBirth>
+            <Sex>Unknown</Sex>
+            <FamilyName>Smith</FamilyName>
+            <FirstNames>Jonny</FirstNames>
+            <Title>Master</Title>
+            <Address>
+                <HouseNameFlat>12</HouseNameFlat>
+                <Street>Adam Street</Street>
+                <Village/>
+                <Town>Bristol</Town>
+                <County>Bristol</County>
+                <PostCode/>
+            </Address>
+        </User>
+    </UserList>
+</UserMatches>

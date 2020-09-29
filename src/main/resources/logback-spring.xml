@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="LOGS" value="./logs"/>
+    <property name="APP_NAME" value="jacob-within-spring-boot-2"/>
+    <property name="CONSOLE_LOG_PATTERN"
+              value="${CONSOLE_LOG_PATTERN:-%d{ISO8601} [%highlight(%level)] [%blue(%X{trace})] %yellow(%logger{26}): %msg%n%throwable}"/>
+    <property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{ISO8601} [%level] [%X{trace}] %logger: %msg%n%throwable}"/>
+
+    <property name="TRACE" value="%X{trace}"/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
+        </layout>
+    </appender>
+
+    <springProfile name="local_unix,local_windows,test">
+        <root level="info">
+            <appender-ref ref="Console"/>
+        </root>
+    </springProfile>
+
+    <!--Other loggers-->
+    <logger name="org.springframework" level="ERROR"/>
+    <logger name="org.mongodb.driver" level="ERROR"/>
+    <logger name="org.synchronoss" level="ERROR"/>
+    <logger name="audit" level="ERROR"/>
+    <logger name="org.apache" level="ERROR"/>
+</configuration>
